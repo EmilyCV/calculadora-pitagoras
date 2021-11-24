@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chamada do arquivo css -->
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/calculator.css">
+    <title>Cromai</title>
+</head>
+
+<body onload="return getName()">
+    <div class="header">
+        <a href="/index.html"><img class="img-back" src="/img/seta.png" alt="triangulo"></a>
+        <div class="title">
+            <h2>Calculadora Pitágoras</h2>
+        </div>
+        <!-- O id faz a chamada do getName e devolve a string ao usuário -->
+        <div id="name" class="txt">
+
+        </div>
+    </div>
+    <div class="container-calculator">
+        <div class="container-calculator-box">
+            <!-- Formuário que armazena o cateto oposto e adjacente -->
+            <form>
+                <span>
+                    <p id="campos-Error"></p>
+                </span>
+                <div class="input-box">
+
+                    <label class="txt" for="catOp">Cateto Oposto</label>
+                    <input required class="input" type="number" min="0" id="catOp" name="catOp"
+                        placeholder="Cateto Oposto">
+                </div>
+                <div class="input-box">
+
+                    <label class="txt" for="catAd">Cateto Adjacente</label>
+                    <input required class="input" type="number" min="0" id="catAd" name="catAd"
+                        placeholder="Cateto Adjacente">
+                </div>
+                <div>
+                    <!-- Chamada da função (funcoes()) para validar se os inputs foram colocados corretamente -->
+                    <button class="button-calculator" type="button" onclick="funcoes()">Calcular</button>
+                </div>
+            </form>
+        </div>
+        <div class="container-calculator-box ">
+            <div class="triangulo">
+                <!-- id faz a chamada do input catOp armazenado  -->
+                <div class="txt txt-triangulo" id="oposto"></div>
+                <div class="container-triangulo">
+                    <img class="img-triangulo" src="/img/triangulo.png" alt="triangulo">
+                </div>
+                <!-- id faz a chamada do calculo da hipotenusa -->
+                <div class="txt txt-triangulo" id="pitagoras"></div>
+            </div>
+            <!-- id faz a chamada do catAd armazenado -->
+            <div class="txt txt-triangulo" id="adjacente"></div>
+        </div>
+    </div>
+    <div class="container-historico">
+        <h2 style="text-align: center;">Histórico</h2>
+        <!-- O id faz a chamada para printar os inputs armazenados na lista da função historico() -->
+        <div id="resultado"><br></div>
+    </div>
+
+    <!-- Chamada do arquivo javascript -->
+    <script type="text/javascript" src="../js/function.js">
+    </script>
+</body>
+
+</html>
