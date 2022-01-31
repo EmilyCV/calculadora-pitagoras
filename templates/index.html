@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cromai</title>
     <!-- Chamada do arquivo css -->
-    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="../static/style/index.css">
 </head>
 
 <body>
     <div class="video" id="video">
-        <video src="/img/estudo.mp4" preload="auto" autoplay muted loop></video>
+        <video src="../static/img/estudo.mp4" preload="auto" autoplay muted loop></video>
     </div>
     <div class="container-body">
         <div class="title">
@@ -26,7 +26,7 @@
                    
                 </p>
                     <div class="img-description-">
-                        <img class="img-description" src="/img/trianguloretanguloangulo-0.png" alt="">
+                        <img class="img-description" src="../static/img/trianguloretanguloangulo-0.png" alt="">
                     </div>
                 <p class="txt">
                     A hipotenusa é o maior lado de um triângulo retângulo e o lado oposto ao ângulo reto. 
@@ -44,7 +44,7 @@
                 <p class="txt">
                     Deseja acessar a nossa calculadora? Digita como gostaria de ser chamado e clique no botão abaixo.
                 </p>
-                <form action="./calculator/calculator.html">
+                <form action="{{ url_for('calculator') }}" method="post" action="/calculator">
                     <label class="txt-label" for="name">Insira seu nome</label>
                     <input id="name" class="input" type="text" name="name">
                     <div>
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="./js/function.js"></script>
+    <script type="text/javascript" src="../../static/js/function.js"></script>
 </body>
 
 </html>

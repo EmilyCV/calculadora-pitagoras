@@ -8,6 +8,7 @@ function setName() {
 function getName(){
     var name = window.localStorage.getItem("name");
     //Passando o nome armazenado assim que abrimos a pag calculator.html
+    console.log(name);
     document.getElementById("name").innerHTML = `Bem vinde, ${name}`;
     console.log(document.getElementById("name"));
 }
