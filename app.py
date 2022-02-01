@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from persistence.database.database_objects import create_user
+from App.gateway.user_controller import create_user_controller
 
 # Criando a instância dessa classe
 # Necessário para que o Flask saiba onde procurar modelos, arquivos estáticos
@@ -13,15 +14,10 @@ def index():
     # O Flask procurará na pasta templates
     return render_template('index.html')
 
-# Função para armazenar o nome e inserir no banco de dados
-def name():
-    name = request.form['name']
-    create_user(name)
     
-
 @app.route('/calculator', methods=['POST', 'GET'])
 def calculator():
-    name()
+    create_user_controller()
     return render_template('calculator/calculator.html')
 
     
