@@ -44,7 +44,7 @@
                 <p class="txt">
                     Deseja acessar a nossa calculadora? Digita como gostaria de ser chamado e clique no botão abaixo.
                 </p>
-                <form action="{{ url_for('calculator') }}" method="post" action="/calculator">
+                <form action="{{ url_for('create') }}" method="post" action="/calculator">
                     <div class="form-group">
                         <label class="txt-label" for="email">Insira seu e-mail</label>
                         <input id="email" class="input" type="text" name="email">
@@ -54,7 +54,7 @@
                     </div>
                     <div>
                         <!-- a function setName() vai armazenar o nome passado dentro do input -->
-                        <button onclick="setName()" class="button-container" type="submit">Bora Calcular?</button>
+                        <button class="button-container" type="submit">Bora Calcular?</button>
                     </div>
                 </form>
             </div>

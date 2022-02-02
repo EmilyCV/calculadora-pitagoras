@@ -1,9 +1,9 @@
-//Armazenando "name" no localStorage
-function setName() {
-    var name = document.getElementById('name').value
-    window.localStorage.setItem("name",name)
-    getName();
-}
+// //Armazenando "name" no localStorage
+// function setName() {
+//     var name = document.getElementById('name').value
+//     window.localStorage.setItem("name",name)
+//     getName();
+// }
 //Pegando o nome armazenado no localStorage
 function getName(){
     var name = window.localStorage.getItem("name");
