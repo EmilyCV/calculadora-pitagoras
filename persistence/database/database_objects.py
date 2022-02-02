@@ -35,6 +35,15 @@ def create_user(email, name):
             "INSERT INTO user (email,nome) VALUES (?,?)", (email, name))
         cursor.execute('COMMIT')
         msg = "Done"
+        # conn.close()
+
+
+def create_catetos(cateto_oposto, cateto_adjacente, resultado, email):
+    with sqlite3.connect('database.db') as con:
+        cursor.execute(
+            "INSERT INTO catetos (catetoOposto,catetoAdjacente,resultado,email) VALUES (?,?,?,?)", (cateto_oposto, cateto_adjacente, resultado, email))
+        cursor.execute('COMMIT')
+        msg = "Done"
         conn.close()
 
 

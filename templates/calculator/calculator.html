@@ -24,7 +24,7 @@
     <div class="container-calculator">
         <div class="container-calculator-box">
             <!-- Formuário que armazena o cateto oposto e adjacente -->
-            <form>
+            <form action="{{ url_for('result') }}" method="post" action="/calculator">
                 <span>
                     <p id="campos-Error"></p>
                 </span>
@@ -42,7 +42,7 @@
                 </div>
                 <div>
                     <!-- Chamada da função (funcoes()) para validar se os inputs foram colocados corretamente -->
-                    <button class="button-calculator" type="button" onclick="funcoes()">Calcular</button>
+                    <button class="button-calculator" type="submit" >Calcular</button>
                 </div>
             </form>
         </div>
