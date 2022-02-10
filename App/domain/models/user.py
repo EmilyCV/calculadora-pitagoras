@@ -1,7 +1,7 @@
 class User:
     def __init__(self,
-                 email="",
-                 name=""
+                 email=str,
+                 name=str
                  ):
         self.email = email
         self.name = name
